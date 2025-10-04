@@ -1,4 +1,4 @@
-Docker compose for custom Jupyter lab setup.
+# Docker compose for custom Jupyter lab setup.
 
 Includes common frameworks - scikit, numpy, matplotlib, tensorflow, pytorch
 
