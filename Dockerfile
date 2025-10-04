@@ -22,22 +22,18 @@ USER jovyan
 # Install desired Python packages using pip
 # Create a requirements.txt file in the same directory as the Dockerfile
 # and list your Python packages there.
+
 COPY requirements.txt /tmp/
 RUN pip install --no-cache-dir -r /tmp/requirements.txt
 
-
-# RUN jupyter labextension install @plotly/dash-jupyterlab --no-build
-
-RUN jupyter lab build
-
-# RUN pip install --no-cache-dir -r /tmp/requirements.txt && \
-#    rm /tmp/requirements.txt
 
 # Install JupyterLab extensions
 # Example: jupyterlab-plotly
 # RUN jupyter labextension install jupyterlab-plotly@latest
 # RUN jupyter labextension install nbdime-jupyterlab jupyterlab-dash jupyterlab-plotly
 # install nbdime-jupyterlab jupyterlab-dash
+
+RUN jupyter lab build
 
 # Copy custom configuration files if needed
 # For example, a custom jupyter_notebook_config.py
